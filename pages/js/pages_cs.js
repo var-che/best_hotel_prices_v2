@@ -355,7 +355,21 @@ function changeHeaders(hotel_object){
     star_html_total = '';
     iterator++;
   }
-  
+
+  /* Amenities */
+  amenities = document.getElementsByClassName('booking-item-features booking-item-features-expand mb30 clearfix')[0];
+  hotel_object['amenities'].forEach((element) => {
+    
+    ameninties_description = '';
+    element['amenities'].forEach((element)=>{
+        ameninties_description = element + ', ' + ameninties_description;
+    })
+    list_element = document.createElement('LI');
+    list_element.innerHTML = `<span class="booking-item-feature-title">${element['group_name']}</span>
+    <p>${ameninties_description}</p>`;
+
+    amenities.appendChild(list_element);
+  })
 }
 
 function getRooms(the_object) {
