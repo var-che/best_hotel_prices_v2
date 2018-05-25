@@ -365,7 +365,7 @@ function changeHeaders(hotel_object){
         ameninties_description = element + ', ' + ameninties_description;
     })
     list_element = document.createElement('LI');
-    list_element.innerHTML = `<span class="booking-item-feature-title">${element['group_name']}</span>
+    list_element.innerHTML = `<span class="booking-item-feature-title" style='background-color: #ed8323; padding: 8px; color: #fff;'>${element['group_name']}</span>
     <p>${ameninties_description}</p>`;
 
     amenities.appendChild(list_element);
@@ -435,8 +435,8 @@ function listTheRooms(room_object){
 
         ul_string = `<a class="booking-item">
             <div class="row">
-                <div class="col-md-3">
-                    <img src="img/800x600.png" alt="Image Alternative text" />
+                <div class="col-md-3" >
+                    <img src="img/800x600.png" alt="Image Alternative text" style='display: none;'/>
                 </div>
                 <div class="col-md-6">
                     <h5 class="booking-item-title">${rates[key]['room_name']}</h5>
